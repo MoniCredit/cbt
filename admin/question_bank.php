@@ -2,6 +2,7 @@
 <html>
 
 <head>
+        <link rel="stylesheet" href="../css/cbt.css">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script>
@@ -181,7 +182,7 @@
                                             ?>
                                             <tr>
                                                 <td><h5><?php echo $n; ?></h5></td>                                            
-                                                <td><h5 class="que"><?php echo $question; ?></h5>
+                                                <td><h5 class="que"><?php echo html_entity_decode($question) ; ?></h5>
                                                     <input type="hidden" class="queid" value="<?php echo $queid; ?>">
 
                                                 <?php 
@@ -193,10 +194,10 @@
                                                         elseif($ans == 4 ){ $ch4 = $icon; }	
 
                                                    echo '<ol  type="A" style=" font-size: 12px" class="">
-                                                                <li class="a">  '.$ch1.' '.$choice1.' </li>
-                                                                <li class="b">  '.$ch2.' '.$choice2.'</li>
-                                                                <li class="c">  '.$ch3.' '.$choice3.' </li>
-                                                                <li class="d">  '.$ch4.' '.$choice4.'</li>																								
+                                                                <li class="a">  '.$ch1.' '.html_entity_decode($choice1).' </li>
+                                                                <li class="b">  '.$ch2.' '.html_entity_decode($choice2).'</li>
+                                                                <li class="c">  '.$ch3.' '.html_entity_decode($choice3).' </li>
+                                                                <li class="d">  '.$ch4.' '.html_entity_decode($choice4).'</li>																								
                                                         </ol>';
                                                     ?> 
 

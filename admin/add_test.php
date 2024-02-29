@@ -573,6 +573,10 @@
                                         <div class="col-lg-4">
                                             <a href="question_bank.php?ass=<?php echo $ass_id; ?>&testid=<?php echo $testid; ?>" class="btn btn-info">View Questions </a>
 
+                                            <input type="hidden" id="tesst_id" value=""/>
+                                            <a target="_blank" onclick="setLink()" href="add_manual_test.php?ass=<?php echo $ass_id; ?>&testid=<?php echo $testid; ?>" class="btn btn-info" id="addSingleQuestionBtn">Add Single Questions </a>
+
+
                                         </div>
                                         <!-- /.col-lg-6 (nested) -->
 
@@ -703,7 +707,7 @@
                                                                     <span class="caret"></span>
                                                             </button>
                                                             <ul class="dropdown-menu pull-right" role="menu">
-                                                                    <li class="addQ" ><a href="#">Add Question to Test</a></li>
+                                                                    <li class="addQ" ><a href="#"  onclick="setCurrent('<?=$testid; ?>')">Add Question to Test</a></li>
                                                                     <li class="edittest"><a data-toggle="modal" data-target="#myModal" href="#">Edit Test Properties</a></li>
                                                                     
                                                                     <li><a href="#">Delete Test</a>  
@@ -720,6 +724,7 @@
                                                                     <li><a href="#">Export</a>  -->
                                                                     </li>
                                                             </ul>
+                                                         
                                                     </div>
                                             </td>
                                             <td>
@@ -863,6 +868,22 @@
         function loadm() {
             
         };
+
+        function setCurrent(val) {
+            document.querySelector('#tesst_id').value = val;
+
+        };
+
+        function setLink() {
+
+            var addSingleQuestionBtn = document.getElementById('addSingleQuestionBtn');
+            addSingleQuestionBtn.href = 'add_manual_test.php?ass=' + document.querySelector('#tesst_id').value;
+
+        };
+
+     
+
+      
         $(document).on("click", ".addQ", function() {
             var row = $(this).closest('tr');
             var tsanme = row.find(".tsname").text();
@@ -917,6 +938,8 @@
         var ass_code = $('#assid').data('code');  
         //alert(ass_id);
         var counttype;
+
+        
             function countuser(counttype, ass_id){
                 var counttype = counttype;
                 $.ajax({

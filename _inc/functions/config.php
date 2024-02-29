@@ -3,8 +3,8 @@
 $host = 'localhost';
 
 $user = 'root';
-$password = 'root';
-$database = 'cbt';
+$password = '0000';
+$database = 'cbt_tas';
 
 
 //establish connection to server and database

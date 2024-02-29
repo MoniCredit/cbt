@@ -3,6 +3,8 @@
 
     <head>
         <link rel="stylesheet" href="calc/css/style.css">
+        <link rel="stylesheet" href="../css/cbt.css">
+
           <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
           <script>
           MathJax = {
@@ -444,7 +446,7 @@
 
                                                                                         <tr>
                                                                                        
-                                                                                            <td><h4><?php echo $question; ?></h4><td>                                           
+                                                                                            <td><h4><?php echo html_entity_decode($question) ; ?></h4><td>                                           
                                                                                         </tr>
                                                                                         <tr>
                                                                                             <td>
@@ -463,16 +465,16 @@
                                                                                                     }
 
                                                                                              echo  ' A. <input type="radio" id="ts1'.$testidats.'q'.$ucid.'" name="choice" data-value="ts'.$testidats.'q'.$ucid.'" '.$ch1.' value="1"> 
-                                                                                                    <label for="ts1'.$testidats.'q'.$ucid.'">' .$choice1. '</label> 
+                                                                                                    <label for="ts1'.$testidats.'q'.$ucid.'">' .html_entity_decode($choice1). '</label> 
                                                                                                     <br/>
                                                                                                     B. <input type="radio" id="ts2'.$testidats.'q'.$ucid.'"  name="choice" data-value="ts'.$testidats.'q'.$ucid.'" '.$ch2.' value="2"> 
-                                                                                                    <label for="ts2'.$testidats.'q'.$ucid.'">' .$choice2. '</label> 
+                                                                                                    <label for="ts2'.$testidats.'q'.$ucid.'">' .html_entity_decode($choice2). '</label> 
                                                                                                     <br/>
                                                                                                     C. <input type="radio" id="ts3'.$testidats.'q'.$ucid.'" name="choice" data-value="ts'.$testidats.'q'.$ucid.'" '.$ch3.' value="3"> 
-                                                                                                    <label for="ts3'.$testidats.'q'.$ucid.'">' .$choice3. '</label> 
+                                                                                                    <label for="ts3'.$testidats.'q'.$ucid.'">' .html_entity_decode($choice3). '</label> 
                                                                                                     <br/>
                                                                                                     D. <input type="radio" id="ts4'.$testidats.'q'.$ucid.'" name="choice" data-value="ts'.$testidats.'q'.$ucid.'" '.$ch4.' value="3">
-                                                                                                    <label for="ts4'.$testidats.'q'.$ucid.'">' .$choice4. '</label> 
+                                                                                                    <label for="ts4'.$testidats.'q'.$ucid.'">' .html_entity_decode($choice4). '</label> 
                                                                                                     <br/>';
                                                                                                     ?> 
                                                                                                     
