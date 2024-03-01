@@ -87,8 +87,7 @@
                         <input type="hidden" required name="ans4_hidden" id="ans4_hidden"> 
 
                         <br><br> 
-
-                        <div id="ans1" name="ans1" contenteditable="true" class="row m-auto border rounded p-2">
+                        <div id="ans1" name="ans1" contenteditable="true" class="form-control">
                             <h4>Enter text here</h4>
                         </div><br><br> 
 
@@ -96,21 +95,21 @@
                             id="ans2"
                             name="ans2"
                             contenteditable="true"
-                            class="row m-auto border rounded p-2"
+                            class="form-control"
                         ><h4>Enter text here</h4></div><br><br> 
 
                         <div
                             id="ans3"
                             name="ans3"
                             contenteditable="true"
-                            class="row m-auto border rounded p-2"
+                            class="form-control"
                         ><h4>Enter text here</h4></div><br><br> 
 
                         <div
                             id="ans4"
                             name="ans4"
                             contenteditable="true"
-                            class="row m-auto border rounded p-2"
+                            class="form-control"
                         ><h4>Enter text here</h4></div><br><br> 
 
                         <p>Answer</p>
